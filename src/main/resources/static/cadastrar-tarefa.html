@@ -1,0 +1,20 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cadastrar Tarefa</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="Cadastro-container">
+      <h2 class="title-1">Nova Tarefa</h2>
+      <form onsubmit="return validarTarefa()" class="form-tarefa">
+        <label>Título:</label>
+        <input type="text" id="tituloTarefa" required /><br />
+        <label>Descrição:</label>
+        <textarea id="descricaoTarefa" required></textarea><br />
+        <button type="submit">Salvar</button>
+      </form>
+    </section>
+  </body>
+</html>
