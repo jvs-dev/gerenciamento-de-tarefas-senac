@@ -162,3 +162,11 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.visualiserTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  color: #1e1e1e;
+}
