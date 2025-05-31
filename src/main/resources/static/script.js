@@ -1,29 +1,33 @@
 function validarLogin() {
     const email = document.getElementById('emailLogin').value;
     const senha = document.getElementById('senhaLogin').value;
+
     if (!email || !senha) {
         alert('Preencha todos os campos!');
-    } else if (!email.includes('@')) {
-        alert('Insira um e-mail válido!');
     } else {
-        window.location.href = '/visualizar-tarefas.html';
+        fetch('http://localhost:8080/api/usuarios/login', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({email, senha})
+        })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(texto => {
+                            throw new Error(texto);
+                        });
+                    }
+                    return response.text();
+                })
+                .then(() => {
+                    alert('Login bem-sucedido!');
+                    window.location.href = 'visualizar-tarefas.html';
+                })
+                .catch(error => {
+                    alert('Erro: ' + error.message);
+                });
     }
 }
 
-function validarCadastro() {
-    const email = document.getElementById('emailCadastro').value;
-    const senha = document.getElementById('senhaCadastro').value;
-    const confsenha = document.getElementById('confSenhaCadastro').value;
-    if (!email.includes('@')) {
-        alert('Insira um e-mail válido!');
-    } else if (!senha || !confsenha) {
-        alert('Preencha todos os campos!');
-    } else if (senha !== confsenha) {
-        alert('As senhas não conferem!');
-    } else {
-        window.location.href = '/visualizar-tarefas.html';
-    }
-}
 
 function validarTarefa() {
     const titulo = document.getElementById('tituloTarefa').value;
@@ -83,5 +87,43 @@ function carregarTarefas() {
             });
 }
 
+function validarCadastro() {
+    const email = document.getElementById('emailCadastro').value;
+    const senha = document.getElementById('senhaCadastro').value;
+    const confsenha = document.getElementById('confSenhaCadastro').value;
+
+    if (!email.includes('@')) {
+        alert('Insira um e-mail válido!');
+    } else if (!senha || !confsenha) {
+        alert('Preencha todos os campos!');
+    } else if (senha !== confsenha) {
+        alert('As senhas não conferem!');
+    } else {
+        fetch('http://localhost:8080/api/usuarios/cadastrar', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({email, senha})
+        })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(texto => {
+                            throw new Error(texto);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(() => {
+                    alert('Cadastro realizado com sucesso!');
+                    window.location.href = 'login.html';
+                })
+                .catch(error => {
+                    alert('Erro: ' + error.message);
+                });
+    }
+}
+
+
 // Chama a função automaticamente ao abrir a página
-window.onload = carregarTarefas;
+if (document.getElementById('tabelaTarefas')) {
+    window.onload = carregarTarefas;
+}
