@@ -6,27 +6,29 @@
     </head>
     <body>
         <section class="Tarefas-container">
+            <a href="index.html" class="backPageBtn" type="button"><ion-icon name="arrow-back-outline"></ion-icon>Sair</a>
             <h2 class="title-1">Minhas Tarefas</h2>
             <table class="visualiserTable" style="justify-self: center" border="1">
                 <thead>
                     <tr>
-                        <th>Título</th>
-                        <th>Descrição</th>
-                        <th>Status</th>
+                        <th class="theader">Título</th>
+                        <th class="theader">Descrição</th>
+                        <th class="theader">Status</th>
+                        <th class="theader"></th>
                     </tr>
                 </thead>
                 <tbody id="tabelaTarefas">
-                    <tr>
-                        <td>Estudar</td>
-                        <td>Revisar conteúdo</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <!-- Exemplo fixo para testes -->
+
                 </tbody>
             </table>
             <a href="cadastrar-tarefa.html" class="btnLink">Criar Tarefa</a
             >
         </section>
+        <img class="backgroundPattern" src="https://jvsdev-ticket-generator.vercel.app/pattern-lines.svg" alt="alt"/>
+        <img class="backgroundLine" src="https://jvsdev-ticket-generator.vercel.app/pattern-squiggly-line-top.svg" alt="alt"/>
+        <img class="backgroundLine2" src="https://jvsdev-ticket-generator.vercel.app/pattern-squiggly-line-bottom-desktop.svg" alt="alt"/>      
         <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>

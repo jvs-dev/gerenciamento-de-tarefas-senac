@@ -13,6 +13,8 @@ public class Tarefa {
 
     private String descricao;
 
+    private String status = "Pendente";
+
     private boolean concluida;
 
     // Getters e Setters
@@ -46,5 +48,13 @@ public class Tarefa {
 
     public void setConcluida(boolean concluida) {
         this.concluida = concluida;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

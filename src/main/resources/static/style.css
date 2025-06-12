@@ -1,172 +1,281 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background: #1e1e1e;
-  color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 60px 20px 20px 20px;
+    background: #1e1e1e;
+    color: #fff;
 }
 h1,
 h2 {
-  color: #2c3e50;
+    color: #2c3e50;
 }
 nav ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 nav li {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 form label {
-  display: inline-block;
-  width: 100px;
+    display: inline-block;
+    width: 100px;
 }
 input,
 textarea {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .title-1 {
-  width: 100%;
-  text-align: center;
-  color: #fff;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .Home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
 }
 .Home-container nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 40px;
 }
 .Home-container nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 8px 50px;
-  border-radius: 5px;
-  background-color: #2c3e50;
-  transition: background-color 0.3s;
-  font-size: 22px;
-  font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 50px;
+    border-radius: 5px;
+    background-color: hsl(7, 88%, 67%);
+    transition: background-color 0.3s;
+    font-size: 22px;
+    font-weight: 600;
 }
 .Home-container nav ul li a:hover {
-  background-color: #34495e;
+    background-color: hsl(7, 88%, 67%);
 }
 
 .Login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #2c3e50;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
 }
 .form-login label {
-  color: #fff;
-  margin-bottom: 5px;
-  width: 100%;
+    color: #fff;
+    margin-bottom: 5px;
+    width: 100%;
 }
 .form-login input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 .form-login button {
-  width: 100%;
-  padding: 10px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(7, 88%, 67%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .form-login button:hover {
-  background-color: #2980b9;
+    background-color: hsl(7, 88%, 67%);
 }
 
 .Cadastro-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Tarefas-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .btnLink {
-  text-decoration: none;
-  color: #fff;
-  padding: 8px 50px;
-  border-radius: 5px;
-  background-color: #2c3e50;
-  transition: background-color 0.3s;
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 50px;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 50px;
+    border-radius: 5px;
+    background-color: hsl(7, 88%, 67%);
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 50px;
 }
 
 .Cadastro-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-tarefa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #2c3e50;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
 }
 
 .form-tarefa label {
-  color: #fff;
-  margin-bottom: 5px;
-  width: 100%;
+    color: #fff;
+    margin-bottom: 5px;
+    width: 100%;
 }
 
 .form-tarefa input,
 .form-tarefa textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
 }
 .form-tarefa button {
-  width: 100%;
-  padding: 10px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(7, 88%, 67%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .visualiserTable {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background: #fff;
-  color: #1e1e1e;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    color: #1e1e1e;
+}
+
+.statusBtn {
+    background: #2980b9;
+    border: none;
+    outline-width: 0px;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.deleteBtn {
+    background: #f00;
+    border: none;
+    outline-width: 0px;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tdBtns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.concluida {
+    background-color: #d4edda;
+}
+.backPageBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: hsl(7, 88%, 67%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    outline-width: 0px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+.backPageBtn ion-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.backgroundPattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.backgroundLine {
+    position: absolute;
+    right: 0px;
+    object-fit: cover;
+    z-index: -1;
+    top: 50px;
+    width: 320px;
+    height: auto;
+}
+
+.backgroundLine2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    object-fit: cover;
+    z-index: -1;
+    width: 60vw;
+    max-width: none;
+    height: auto;
+}
+
+.theader {
+    padding: 7px 0px
+}
+
+tbody td {
+    padding: 12px; /* você pode ajustar esse valor conforme quiser */
+}
+.watermark {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: #969d9f;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.watermark ion-icon {
+    margin: 0px 10px 0px 0px;
+    font-size: 22px;
 }
